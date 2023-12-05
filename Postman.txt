@@ -1,0 +1,39 @@
+probando con Postman.
+
+- peticiones de tipo get(para obtener):
+---obtener todos:http://localhost:8080/api/clientes
+---obtener por id:http://localhost:8080/api/clientes/5
+
+- peticiones de tipo post(para crear):
+---en postam configuramos
+------POST -> body ->raw -> cambiamos text por json
+------envamos:
+------{
+        "nombre": "bilbo",
+        "apellido": "beggind",
+        "email": "bilbo@bolsadeideas.com"
+          }
+-------esto nos retorna un body con el elemento creado
+-------ademas un 201 que es creado 
+
+- peticiones de tipo put(para actualizar):
+---en postam configuramos
+------PUT -> body ->raw -> cambiamos text por json
+------envamos:
+------{
+        "nombre": "se John",
+        "apellido": "Doe doe",
+        "email": "john.doe@gmail.com"
+         }
+-------esto nos retorna un body con el elemento actualizado
+-------ademas un 201 que es creado(en esta caso actualizado) 
+
+
+- peticiones de tipo delete(para eliminar):
+---en postam configuramos:
+---PUT-> y enviamos(send)
+----para eliminar un cliente:http://localhost:8080/api/clientes/2
+----podemos probar listando todos los clientes
+----retorna un 204 (que es elimino con exito y no retorna nada)
+ 
+
